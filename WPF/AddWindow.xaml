@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="450" Width="400">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 0 0 20"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="PaleGoldenrod">
+        <StackPanel>
+            <TextBlock Text="Введите значения" Margin="0 0 0 20"/>
+            <TextBlock Text="Устройство" />
+            <ComboBox Width="200" Height="20" Margin="0 0 0 20" x:Name="NameClass" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem>
+                    <TextBlock>Авто</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Электроскутер</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Транспортное средство</TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+            <TextBlock Text="Фирма" />
+            <TextBox x:Name="Firma"/>
+            <TextBlock Text="Модель" />
+            <TextBox x:Name="Model"/>
+            <TextBlock Text="Скорость" />
+            <TextBox x:Name="Speed"/>
+            <TextBlock Text="Мощность" />
+            <TextBox x:Name="Pow"/>
+            <TextBlock Text="Вес" x:Name="SpecText" Visibility="Hidden"/>
+            <TextBox x:Name="Spec" Visibility="Hidden"/>
+            <Button Width="100" HorizontalAlignment="Center" Click="Button_Click">Добавить</Button>
+        </StackPanel>
+    </Grid>
+</Window>
